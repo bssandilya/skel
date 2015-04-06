@@ -18,8 +18,8 @@ class IndexHandler(web.RequestHandler):
         self.write("Gosh darnit! You caused a %d error" % status_code)
 
     def post(self):
-        # data = simplejson.loads(self.request.body)
-        self.render('someother.html')
+        username - self.get_argument('username',None)
+        self.render('someother.html', username=username)
 
     def get(self):
         # param1 = self.get_argument('param1')
