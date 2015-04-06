@@ -13,7 +13,7 @@ class SomeHandler(web.RequestHandler):
         self.render("someother.html")
 
 class IndexHandler(web.RequestHandler):
-
+    ''' Index Handler'''
     def write_error(self, status_code, **kwargs):
         self.write("Gosh darnit! You caused a %d error" % status_code)
 
