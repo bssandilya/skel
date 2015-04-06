@@ -1,6 +1,6 @@
 from tornado import httpserver, web, ioloop
 import tornado.options
-import simplejson
+
 
 class ErrorHandler(web.RequestHandler):
 
@@ -26,7 +26,7 @@ class IndexHandler(web.RequestHandler):
         self.render("index.html", username=username)
 
 class Application(web.Application):
-
+    ''' New Application setup '''
     def __init__(self):
         handlers = [(r'/', IndexHandler),
                     (r'/something', SomeHandler),
