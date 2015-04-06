@@ -22,8 +22,8 @@ class IndexHandler(web.RequestHandler):
         self.render('someother.html', username=username)
 
     def get(self):
-        # param1 = self.get_argument('param1')
-        self.render("index.html")
+        param1 = self.get_argument('username')
+        self.render("index.html", username=username)
 
 class Application(web.Application):
 
